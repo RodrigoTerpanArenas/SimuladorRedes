@@ -72,7 +72,8 @@ public class ToogleListing : MonoBehaviour
             }
             notes2.Clear();
             shuffle(listao);
-            int rango = Random.Range(1, 5);
+            int limit = listao.Length / 2;
+            int rango = Random.Range(5, limit);
             int[] listax = new int[rango];
             for (int i = 0; i < listax.Length; i++)
             {

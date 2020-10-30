@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6734018705224787680}
   m_Layer: 0
   m_Name: mug02
-  m_TagString: 2
+  m_TagString: 1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

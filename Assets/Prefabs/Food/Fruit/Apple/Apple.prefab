@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 5817536401929388746}
   m_Layer: 0
   m_Name: Apple
-  m_TagString: 47
+  m_TagString: 4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,7 +183,7 @@ Transform:
   m_GameObject: {fileID: 6649485972376735190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.558044, y: 82.50065, z: -24.852455}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 80, y: 80, z: 80}
   m_Children:
   - {fileID: 6650128070248467564}
   - {fileID: 6650128068450449106}

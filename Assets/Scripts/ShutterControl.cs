@@ -288,7 +288,7 @@ public class ShutterControl : MonoBehaviour
            cam.WorldToViewportPoint(centro + (m* Vector3.Scale(new Vector3(-Colisionador.size.x, Colisionador.size.y, Colisionador.size.z) * 0.5f,escala)))
         };
 
-        //Obtenemos los puntos máximos yb mínimos de entre todos los puntos x y y del struct puntos.
+        //Obtenemos los puntos máximos y mínimos de entre todos los puntos x y y del struct puntos.
         puntose = puntos;
         var min = puntos[0];
         var max = puntos[0];
@@ -332,7 +332,7 @@ public class ShutterControl : MonoBehaviour
             int layerMask = 1 << 9;
             layerMask = ~layerMask;
 
-            //Debug.DrawRay(v, dir, Color.green, 15f);
+            Debug.DrawRay(v, dir, Color.green, 15f);
             if (Physics.Raycast(v,dir.normalized, out hit, dir.magnitude,layerMask) && hit.collider.tag != obj.tag)
             {
                 //Debug.Log(hit.collider.tag);

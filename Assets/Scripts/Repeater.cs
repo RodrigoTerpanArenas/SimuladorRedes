@@ -87,8 +87,12 @@ public class Repeater : MonoBehaviour
          * 3.-  Si la casilla de objetos al azar no está seleccionada, entonces se ejecuta la función de generar una lista para utilizar después.
          * 4.- Finalmente, la subrutina ejecuta las códigos ligados a los botones de generar objetos y de captura de pantalla.
          */
-         if(!toggleInst.isOn)
-        {
+        int rep = 1;
+
+            if (toggleInst.isOn)
+            {
+                rep = ConsigueNumeroInst(inputInst);
+            }
             canvas.GetComponent<CanvasGroup>().alpha = 0;
             for (int i = 0; i < numero; i++)
             {
@@ -97,6 +101,10 @@ public class Repeater : MonoBehaviour
                 getSlider(slidercam1);
                 getSlider(slidercam2);
                 getSlider(sliderzoom);
+                if (toggleInst.isOn && i % rep == 0)
+                {
+                    roominst.onClick.Invoke();
+                }
                 for (int a = 0; a < listaobj.Length; a++)
                 {
                     listaobj[a].isOn = false;
@@ -113,7 +121,7 @@ public class Repeater : MonoBehaviour
                 if (toggleobst.isOn)
                 {
                     int jok = Random.Range(1,10);
-                    if (jok == 1)
+                    if (jok >= 3)
                     { 
                         obsinst.onClick.Invoke();
                     }
@@ -124,43 +132,11 @@ public class Repeater : MonoBehaviour
                 Resources.UnloadUnusedAssets();
             }
             canvas.GetComponent<CanvasGroup>().alpha = 1;
-        }
-        else
+        if (toggleInst.isOn)
         {
-            int rep = ConsigueNumeroInst(inputInst);
-            canvas.GetComponent<CanvasGroup>().alpha = 0;
-            for (int i = 0; i < numero; i++)
-            {
-                getSlider(sliderluz1);
-                getSlider(sliderluz2);
-                getSlider(slidercam1);
-                getSlider(slidercam2);
-                getSlider(sliderzoom);
-                if( i % rep == 0)
-                {
-                    roominst.onClick.Invoke();
-                }
-                for (int a = 0; a < listaobj.Length; a++)
-                {
-                    listaobj[a].isOn = false;
-                }
-                if (toggle.isOn == false)
-                {
-                    generaLista();
-                }
-                yield return new WaitForSeconds(1);
-                //togglelisting.onClick.Invoke();
-                yield return new WaitForSeconds(2);
-                cupinstanciate.onClick.Invoke();
-                yield return new WaitForSeconds(7);
-                shuttercontrol.onClick.Invoke();
-                yield return new WaitForSeconds(2);
-            }
-            canvas.GetComponent<CanvasGroup>().alpha = 1;
             roomback.onClick.Invoke();
-
-
         }
+       
 
     }
 

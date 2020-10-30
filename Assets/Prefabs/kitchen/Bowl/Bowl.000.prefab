@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7751842066882010794}
   m_Layer: 0
   m_Name: Bowl.000
-  m_TagString: 0
+  m_TagString: 2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1095984492032601606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -70.37576, y: 82.50001, z: -25.111675}
-  m_LocalScale: {x: 30, y: 30, z: 30}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
