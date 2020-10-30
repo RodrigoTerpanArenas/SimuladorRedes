@@ -33,8 +33,21 @@ to<br/>
 `dir1 = PlayerPrefs.GetString("str1", "address of your choice");`
 
 ## Functionality
+### Manual image generation
+
+### Automatic image generation and other options
 
 ## Importing your own models
+When importing your own models in order to generate custom data, make sure of the following:
+* Adjust the scale of your object in accordance to the environment.
+* Add a box collider component to te model. Make sure to adjust the box collider so that it completely envelops the object.
+* Ensure that the center of the box collider coincides with the center of the object.
+* If the model comes form a third party source, be sure to deactivate any components that might interfere with collision detection such as additional colliders.
+* Make sure that your object is tagged correctly (the tag in this case is taken as the object label in the captured information). This will depend on the dataset you are using.
+
+After following these steps, the object can be turned into a prefab (for ease of use, it is recommended that the prefab is catalogued inside the "Prefab" folder of the project).
+
+To use this prefab, it must be placed in one of the lists inside the `ListManager`object. The `Obj` list corresponds to the 14 options in the UI. Allowing to manually coose which objects to generate. `ObjAzr` Corresponds to the list of objects generated when choosing the  "Generate at random choice" and the `Ext` list corresponds to obstacles whose information won't be taken into account.
 
 ## Status
 The project is currently under developement in order to further increase functionality and ease of use. 
