@@ -34,8 +34,20 @@ to<br/>
 
 ## Functionality
 ### Manual image generation
+In order to manually generate models and capture information, the following steps are to be followed.
+* Make sure that the `Obj` list in the `ListManager`component has the appropiate prefabs listed.
+* On playmode, Select which objects to generate from the Object generation list.
+* Optionally select ilumination and camera angle from the corresponding menu.
+* Click `Generate`button to generate the objects in the work zone.
+* Click the `Capture`button to capture and save the information in the corresponding folders (If non existant, folders will be automatically created on default address).
+*  To reset numbering, uncheck the corresponding box in the last menu. To save on the validation folder, uncheck the `Save on training folder` option on the same menu.
 
 ### Automatic image generation and other options
+Automatic information generation functions as follows:
+ * Select the `Generate at random`option in the object list menu.
+ * In the fourth menú, select the number of images to be generated in the first input field.
+ * Optionally, select the checkmark to shuffle the room every X  iterations and select the number of iterations in the corresponding input field.
+ * Select the `Automatic generation` button to start the process. The process will end automatically once the selected number of images is captured.
 
 ## Importing your own models
 When importing your own models in order to generate custom data, make sure of the following:
